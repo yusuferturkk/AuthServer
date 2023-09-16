@@ -75,7 +75,7 @@ namespace AuthServer.Service.Services
             if (isExistEntity == null)
             {
                 return ResponseDto<NoContentDto>.Fail(404, "Id not found!", true);
-            };
+            }
 
             var updateEntity = ObjectMapper.Mapper.Map<TEntity>(dto);
             _repository.Update(updateEntity);
