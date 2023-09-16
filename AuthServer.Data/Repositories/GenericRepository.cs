@@ -13,10 +13,10 @@ namespace AuthServer.Data.Repositories
         private readonly AppDbContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public GenericRepository(AppDbContext context, DbSet<TEntity> dbSet)
+        public GenericRepository(AppDbContext context)
         {
             _context = context;
-            _dbSet = dbSet;
+            _dbSet = context.Set<TEntity>();
         }
 
         public async Task AddAsync(TEntity entity)

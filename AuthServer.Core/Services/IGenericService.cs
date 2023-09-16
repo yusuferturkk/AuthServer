@@ -16,7 +16,7 @@ namespace AuthServer.Core.Services
 
         Task<ResponseDto<IEnumerable<TDto>>> Where(Expression<Func<TEntity, bool>> predicate);
 
-        Task<ResponseDto<NoContentDto>> AddAsync(TDto dto);
+        Task<ResponseDto<TDto>> AddAsync(TDto dto);
 
         Task<ResponseDto<NoContentDto>> Remove(int id);
 
